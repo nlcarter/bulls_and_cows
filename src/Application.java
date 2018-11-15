@@ -4,11 +4,11 @@ public class Application {
 
     public void start(){
 
-        System.out.println("Guess a number: ");
+        Computer comp = new Computer();
 
-        String guess = Keyboard.readInput();
+        String code = comp.getCode();
 
-        System.out.println(guess);
+        System.out.println(code);
 
     }
 
