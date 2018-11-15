@@ -5,9 +5,7 @@ public class Application {
     public void start(){
 
         Computer comp = new Computer();
-
         String code = comp.getCode();
-
         System.out.println(code);
 
     }
