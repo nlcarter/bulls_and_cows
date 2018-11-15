@@ -1,13 +1,13 @@
 public class Computer extends Code {
 
     @Override
-    public String getCode() {
+    public String getCode(String msg) {
 
         //Create four digit code.
 
         StringBuilder code = new StringBuilder();
         for (int i = 0; i < 4; i++) {
-            int digit = (int) (Math.random() * (9 - 0));
+            int digit = (int) (Math.random() * (9));
             code.append(digit);
         }
 
@@ -15,9 +15,10 @@ public class Computer extends Code {
 
         if (code.charAt(0) == code.charAt(1) || code.charAt(0) == code.charAt(2) || code.charAt(0) == code.charAt(3)
                 || code.charAt(1) == code.charAt(2) || code.charAt(1) == code.charAt(3) || code.charAt(2) == code.charAt(3)) {
-            return getCode();
+            return getCode("Code not unique");
         } else {
             return code.toString();
         }
+
     }
 }

@@ -19,13 +19,13 @@ public class ComputerTest {
 
     @Test
     public void testIsComputerCodeGenerated(){
-        String code = comp.getCode();
+        String code = comp.getCode("");
         assertTrue(code.length() == 4);
     }
 
     @Test
     public void testIsComputerCodeUnique (){
-        String code = comp.getCode();
+        String code = comp.getCode("");
         assertTrue(code.charAt(0) != code.charAt(1));
     }
 
