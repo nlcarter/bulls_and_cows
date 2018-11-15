@@ -3,30 +3,31 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ComputerTest {
+public class PlayerTest {
 
     @Test
     public void testTrueIsTrue() {
         assertEquals(true, true);
     }
 
-    private Computer comp;
+    private Player player;
 
     @Before
     public void setUp() {
-       comp = new Computer();
+        player = new Player();
     }
 
     @Test
-    public void testIsComputerCodeGenerated(){
-        String code = comp.getCode();
+    public void testIsPlayerCodeEntered(){
+        String code = player.getCode();
         assertTrue(code.length() == 4);
     }
 
     @Test
-    public void testIsComputerCodeUnique (){
-        String code = comp.getCode();
+    public void testIsPlayerCodeUnique (){
+        String code = player.getCode();
         assertTrue(code.charAt(0) != code.charAt(1));
     }
+
 
 }

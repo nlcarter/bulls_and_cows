@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2bbbbc7-b0ef-4f8c-981a-f00fbc3e2295" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ComputerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bulls_and_cows_java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bulls_and_cows_java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bulls_and_cows_java/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bulls_and_cows_java/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bulls_and_cows_java/Computer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bulls_and_cows_java/Computer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bulls_and_cows_java/ComputerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bulls_and_cows_java/ComputerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bulls_and_cows_java/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bulls_and_cows_java/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComputerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComputerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,22 +28,22 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="TestCodes" value="1" />
-          <entry key="java" value="19" />
+          <entry key="java" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="20" />
+          <entry key="JAVA" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1509" />
+          <entry key="java" value="2045" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1509" />
+          <entry key="JAVA" value="2045" />
         </counts>
       </usages-collector>
     </session>
@@ -53,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -61,11 +62,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="34">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlayerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
               <folding>
-                <element signature="e#76#77#0" expanded="true" />
-                <element signature="e#100#101#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#113#114#0" expanded="true" />
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#220#221#0" expanded="true" />
+                <element signature="e#256#257#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Computer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="17" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -92,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ComputerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="289">
+              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#103#104#0" expanded="true" />
@@ -140,11 +153,12 @@
         <option value="$PROJECT_DIR$/src/Hard.java" />
         <option value="$PROJECT_DIR$/src/Keyboard.java" />
         <option value="$PROJECT_DIR$/src/Code.java" />
-        <option value="$PROJECT_DIR$/src/Player.java" />
-        <option value="$PROJECT_DIR$/src/Computer.java" />
-        <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/test/TestCodes" />
         <option value="$PROJECT_DIR$/src/Testing/ComputerTest.java" />
+        <option value="$PROJECT_DIR$/src/Computer.java" />
+        <option value="$PROJECT_DIR$/src/PlayerTest.java" />
+        <option value="$PROJECT_DIR$/src/Application.java" />
+        <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/src/ComputerTest.java" />
       </list>
     </option>
@@ -194,7 +208,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542261082592" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542265167488" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -225,7 +239,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ComputerTest.testIsCodeGenerated">
+  <component name="RunManager" selected="JUnit.PlayerTest.testTrueIsTrue">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Application" />
       <module name="bulls_and_cows_java" />
@@ -243,11 +257,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComputerTest.testIsSpellingCorrectWithWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComputerTest.testIsCodeUnique" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bulls_and_cows_java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ComputerTest" />
-      <option name="METHOD_NAME" value="testIsSpellingCorrectWithWord" />
+      <option name="METHOD_NAME" value="testIsCodeUnique" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComputerTest,testTrueIsTrue and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bulls_and_cows_java" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="ComputerTest,testTrueIsTrue" />
+        <pattern testClass="ComputerTest,testIsCodeGenerated" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.testTrueIsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bulls_and_cows_java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="METHOD_NAME" value="testTrueIsTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -255,14 +290,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Application" />
-      <item itemvalue="JUnit.ComputerTest.testIsSpellingCorrectWithWord" />
       <item itemvalue="JUnit.ComputerTest.testIsCodeGenerated" />
+      <item itemvalue="JUnit.ComputerTest,testTrueIsTrue and 1 more" />
+      <item itemvalue="JUnit.ComputerTest.testIsCodeUnique" />
+      <item itemvalue="JUnit.PlayerTest.testTrueIsTrue" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ComputerTest.testIsCodeGenerated" />
-        <item itemvalue="JUnit.ComputerTest.testIsSpellingCorrectWithWord" />
+        <item itemvalue="JUnit.PlayerTest.testTrueIsTrue" />
+        <item itemvalue="JUnit.ComputerTest.testIsCodeUnique" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.ComputerTest,testTrueIsTrue and 1 more" />
+        <item itemvalue="JUnit.ComputerTest.testIsCodeGenerated" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +315,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542230425383</updated>
-      <workItem from="1542230428559" duration="10859000" />
+      <workItem from="1542230428559" duration="12974000" />
     </task>
     <servers />
   </component>
@@ -290,9 +329,27 @@
     <history-entry file="ComputerTest_testIsCodeGenerated - 2018.11.15 at 18h 48m 25s.xml">
       <configuration name="ComputerTest.testIsCodeGenerated" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ComputerTest_testIsCodeGenerated - 2018.11.15 at 18h 50m 20s.xml">
+      <configuration name="ComputerTest.testIsCodeGenerated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComputerTest_testIsCodeGenerated - 2018.11.15 at 18h 51m 25s.xml">
+      <configuration name="ComputerTest.testIsCodeGenerated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComputerTest_testIsCodeGenerated - 2018.11.15 at 18h 53m 30s.xml">
+      <configuration name="ComputerTest.testIsCodeGenerated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComputerTest_testIsCodeGenerated - 2018.11.15 at 18h 53m 56s.xml">
+      <configuration name="ComputerTest.testIsCodeGenerated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComputerTest_testIsCodeGenerated - 2018.11.15 at 18h 54m 07s.xml">
+      <configuration name="ComputerTest.testIsCodeGenerated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComputerTest,testTrueIsTrue_and_1_more - 2018.11.15 at 18h 58m 36s.xml">
+      <configuration name="ComputerTest,testTrueIsTrue and 1 more" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10859000" />
+    <option name="totallyTimeSpent" value="12974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
@@ -363,17 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#76#77#0" expanded="true" />
-            <element signature="e#100#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Keyboard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -401,21 +447,42 @@
     <entry file="file://$PROJECT_DIR$/src/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Computer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        <state relative-caret-position="272">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#113#114#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ComputerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="289">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#103#104#0" expanded="true" />
