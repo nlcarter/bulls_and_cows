@@ -1,6 +1,6 @@
 public class Player extends Code {
 
-    public String code;
+    private String code;
 
     @Override
     public String getCode(String msg) {
