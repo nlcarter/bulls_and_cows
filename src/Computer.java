@@ -7,7 +7,7 @@ public class Computer extends Code {
 
         StringBuilder code = new StringBuilder();
         for (int i = 0; i < 4; i++) {
-            int digit = (int) (Math.random() * (9));
+            int digit = (int) (Math.random() * (10));
             code.append(digit);
         }
 

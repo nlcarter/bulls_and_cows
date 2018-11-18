@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Application {
 
     private static final int EASY = 1;
@@ -12,6 +14,22 @@ public class Application {
         Computer comp = new Computer();
         Player player = new Player();
         Level easy = new Easy();
+        Level medium = new Medium();
+
+        StringBuilder code = new StringBuilder();
+
+        Set<String> codeSet;
+
+        codeSet = new HashSet<>();
+        while (codeSet.size() < 5040){
+            codeSet.add(comp.getCode(""));
+        }
+
+        List<String> compGuessList = new ArrayList<>(codeSet);
+        Collections.shuffle(compGuessList);
+
+        System.out.println(compGuessList.size());
+
 
         //Game set up
         System.out.println("Welcome to Bulls and Cows!");
@@ -20,13 +38,15 @@ public class Application {
         if (gameOption == 1){
             //Gets the random computer code that is used for the game
             level = levelSelection();
+            String computerCode = comp.getCode("");
+            System.out.println("C: " + computerCode);
+            //Gets the user's secret four digit code (that the computer will try guess)
+            String playerCode = player.getCode("Please enter a unique four digit code: ");
+            System.out.println("P: " + playerCode);
             if (level == 1){
-                String computerCode = comp.getCode("");
-                System.out.println("C: " + computerCode);
-                //Gets the user's secret four digit code (that the computer will try guess)
-                String playerCode = player.getCode("Please enter a unique four digit code: ");
-                System.out.println("P: " + playerCode);
                 easy.playGame(computerCode, playerCode);
+            } else if (level == 2){
+                medium.playGame(computerCode, playerCode);
             }
         } else if (gameOption == 2){
             gameInstructions();

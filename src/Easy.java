@@ -1,6 +1,5 @@
 public class Easy extends Level {
 
-
     @Override
     public void playGame(String compCode, String playerCode) {
 
