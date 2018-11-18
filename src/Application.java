@@ -6,7 +6,11 @@ public class Application {
     private static final int MEDIUM = 2;
     private static final int HARD = 3;
 
+    private static final int YES = 1;
+    private static final int NO = 2;
+
     private int level;
+    private int replay;
 
 
     public void start(){
@@ -17,19 +21,6 @@ public class Application {
         Level medium = new Medium();
 
         StringBuilder code = new StringBuilder();
-
-        Set<String> codeSet;
-
-        codeSet = new HashSet<>();
-        while (codeSet.size() < 5040){
-            codeSet.add(comp.getCode(""));
-        }
-
-        List<String> compGuessList = new ArrayList<>(codeSet);
-        Collections.shuffle(compGuessList);
-
-        System.out.println(compGuessList.size());
-
 
         //Game set up
         System.out.println("Welcome to Bulls and Cows!");
@@ -45,8 +36,16 @@ public class Application {
             System.out.println("P: " + playerCode);
             if (level == 1){
                 easy.playGame(computerCode, playerCode);
+                replay = replayGame();
+                if (replay == 1){
+                    start();
+                }
             } else if (level == 2){
                 medium.playGame(computerCode, playerCode);
+                replay = replayGame();
+                if (replay == 1){
+                    start();
+                }
             }
         } else if (gameOption == 2){
             gameInstructions();
@@ -115,6 +114,34 @@ public class Application {
         System.out.println("\t - If at the end of the rounds, neither you nor the computer has four bulls, the game will end in a tie");
         System.out.println("Enter any key to return to the start menu: ");
         Keyboard.readInput();
+
+    }
+
+    private int replayGame (){
+
+        System.out.println("Would you like to play again: \n 1. Yes \n 2. No");
+
+        String choice = Keyboard.readInput();
+        replay = 0;
+
+        try {
+            replay = Integer.parseInt(choice);
+            if (replay == 1 || replay == 2){
+                return replay;
+            } else {
+                System.out.println("Please enter a valid option: ");
+                return replayGame();
+            }
+        }catch (NumberFormatException e){
+            if (choice.equalsIgnoreCase("yes")) {
+                return YES;
+            } else if (choice.equalsIgnoreCase("no")){
+                return NO;
+            } else {
+                System.out.println("Please enter a valid option: ");
+                return replayGame();
+            }
+        }
 
     }
 
