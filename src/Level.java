@@ -21,19 +21,27 @@ public abstract class Level {
     Code comp = new Computer();
     Code player = new Player();
 
+    /* The playGame() method is used for each level (i.e. subclass) */
+
     public abstract void playGame (String compCode, String playerCode, int turns);
 
+    /* The getBulls() method compares the two codes for exact matches, and then returns the number of exact matches
+     to be used as the bulls */
+
     int getBulls(String compCode, String playerCode){
-        int countBulls = 0;
+        bullCount = 0;
         int i = 0;
         while(i < compCode.length() && i < playerCode.length()){
             if(compCode.charAt(i) == playerCode.charAt(i)){
-                countBulls++;
+                bullCount++;
             }
             i++;
         }
-        return countBulls;
+        return bullCount;
     }
+
+     /* The getCows() method compares the two codes for in-exact matches, and then returns the number of in-exact matches
+     to be used as the cows */
 
     int getCowCount (String compCode, String playerCode){
         cowCount = 0;

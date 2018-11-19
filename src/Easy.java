@@ -2,13 +2,15 @@ import java.util.Arrays;
 
 public class Easy extends Level {
 
+    /* The Easy playGame() method runs through the selected number of rounds, and each round it will pull a code from
+     * random to be used as the computer's guess */
+
     @Override
     public void playGame(String compCode, String playerCode, int userTurns) {
 
         turns = 1;
 
         while (turns <= userTurns) {
-
             String userGuess = player.getCode("Round " + turns + " of " + userTurns + " - Try to guess the computer's four digit code: ");
             bullCount = getBulls(compCode, userGuess);
             cowCount = getCowCount(compCode, userGuess);

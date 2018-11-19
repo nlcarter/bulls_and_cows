@@ -2,6 +2,10 @@ import java.util.*;
 
 public class Hard extends Level {
 
+    /* The Hard playGame() method runs through the selected number of rounds, and each round it will pull a code from
+     * a set of codes that contain the 5040 unique four-digit codes. The computer will then remove codes from this list each
+     * round, based on the number of bulls and/or cows were scored, resulting in a smaller list each round*/
+
     @Override
     public void playGame(String compCode, String playerCode, int userTurns) {
 
@@ -46,7 +50,7 @@ public class Hard extends Level {
                 compGuessList.remove(compGuess);
             }
 
-            System.out.println("List size remaining = " + compGuessList.size());
+//            System.out.println("List size remaining = " + compGuessList.size());
             bullCount = getBulls(compGuess, playerCode);
             cowCount = getCowCount(compGuess, playerCode);
             System.out.println("- The computer guessed " + compGuess + ", which scored " + bullCount + " Bulls and " + cowCount+ " Cows.");

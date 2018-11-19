@@ -2,11 +2,12 @@ import java.util.*;
 
 public class Medium extends Level {
 
+    /* The Medium playGame() method runs through the selected number of rounds, and each round it will pull a code from
+     * a set of codes that contain the 5040 unique four-digit codes. The computer will then select a code from this
+     * list each time and remove the previous guess, ensuring it will not pick the same code multiple times */
+
     @Override
     public void playGame(String compCode, String playerCode, int userTurns) {
-
-        //Create a set of codes that contain the 5040 unique four-digit codes. The computer will then select a code
-        //from this list each time, ensuring it will not pick the same code multiple times
 
         Set<String> codeSet = new HashSet<>();
         while (codeSet.size() < 5040){
@@ -32,6 +33,7 @@ public class Medium extends Level {
             count++;
             bullCount = getBulls(compGuess, playerCode);
             cowCount = getCowCount(compGuess, playerCode);
+            compGuessList.remove(compGuess);
             System.out.println("- The computer guessed " + compGuess + ", which scored " + bullCount + " Bulls and " + cowCount+ " Cows.");
             if (bullCount == 4){
                 System.out.println("Four Bulls! The computer guessed your secret code (" + playerCode + ") and win the game.");
