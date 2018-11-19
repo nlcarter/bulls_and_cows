@@ -2,12 +2,10 @@ import java.util.*;
 
 public class Hard extends Level {
 
-    Set<String> codeSet;
-
     @Override
     public void playGame(String compCode, String playerCode, int userTurns) {
 
-        codeSet = new HashSet<>();
+        Set<String> codeSet = new HashSet<>();
         while (codeSet.size() < 5040){
             codeSet.add(comp.getCode(""));
         }
@@ -19,13 +17,11 @@ public class Hard extends Level {
         while (turns <= userTurns) {
 
             String userGuess = player.getCode("Round " + turns + " of " + userTurns + " - Try to guess the computer's four digit code: ");
-            System.out.println("You guessed " + userGuess);
             bullCount = getBulls(compCode, userGuess);
             cowCount = getCowCount(compCode, userGuess);
-            System.out.println("Player Bulls: " + bullCount);
-            System.out.println("Player Cows: " + cowCount);
+            System.out.println("- You guessed " + userGuess + ", which scored " + bullCount + " Bulls and " + cowCount+ " Cows.");
             if (bullCount == 4){
-                System.out.println("Four Bulls! You win");
+                System.out.println("Four Bulls! You guessed the computer's secret code (" + compCode + ") and win the game.");
                 break;
             }
 
@@ -38,8 +34,6 @@ public class Hard extends Level {
                 } else {
                     for (int j = 0; j < compGuess.length(); j++){
                         if (playerCode.charAt(i) == compGuess.charAt(j)){
-                            System.out.println("PC i = " + playerCode.charAt(i));
-                            System.out.println("CC j = " + compGuess.charAt(j));
                             int finalI = i;
                             int finalJ = j;
                             compGuessList.removeIf(n -> (n.charAt(finalJ) == playerCode.charAt(finalI)));
@@ -52,17 +46,20 @@ public class Hard extends Level {
                 compGuessList.remove(compGuess);
             }
 
-            System.out.println("The computer guessed " + compGuess);
             System.out.println("List size remaining = " + compGuessList.size());
             bullCount = getBulls(compGuess, playerCode);
             cowCount = getCowCount(compGuess, playerCode);
-            System.out.println("Computer Bulls: " + bullCount);
-            System.out.println("Computer Cows: " + cowCount);
+            System.out.println("- The computer guessed " + compGuess + ", which scored " + bullCount + " Bulls and " + cowCount+ " Cows.");
             if (bullCount == 4){
-                System.out.println("Four Bulls! The computer wins");
+                System.out.println("Four Bulls! The computer guessed your secret code (" + playerCode + ") and win the game.");
                 break;
             }
             turns++;
+            System.out.println("--------------");
+            if (turns == userTurns + 1) {
+                System.out.println("It's a tie! Neither you nor the computer were able to guess the number of bulls and cows - the computer's secret code was: " + compCode);
+                System.out.println("-----------------------------------");
+            }
         }
 
     }
