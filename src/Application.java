@@ -11,7 +11,9 @@ public class Application {
 
     private int level;
     private int replay;
+    private int turns;
 
+    /* The start() method acts as the main method, and calls the various other classes depending on what level is selected */
 
     public void start(){
 
@@ -21,80 +23,38 @@ public class Application {
         Level medium = new Medium();
         Level hard = new Hard();
 
-
-//        Set<String> codeSet;
-//        codeSet = new HashSet<>();
-//        while (codeSet.size() < 5040){
-//            codeSet.add(comp.getCode(""));
-//        }
-//        List<String> compGuessList = new ArrayList<>(codeSet);
-//        Collections.shuffle(compGuessList);
-//
-//        String compGuess = compGuessList.get(0);
-//        System.out.println(compGuess);
-//
-//        String testCode = player.getCode("Please enter a unique four digit code: ");
-//
-//        System.out.println(compGuess + " / " + testCode);
-//
-//        for (int i = 0; i < compGuess.length(); i++){
-//            if (testCode.charAt(i) == compGuess.charAt(i)){
-//                int finalI = i;
-//                compGuessList.removeIf(n -> (n.charAt(finalI) != testCode.charAt(finalI)));
-//            }
-//        }
-
-
-//        if (testCode.charAt(0) == compGuess.charAt(0)){
-//            compGuessList.removeIf(n -> (n.charAt(0) != testCode.charAt(0)));
-//        }
-//
-//        if (testCode.charAt(1) == compGuess.charAt(1)){
-//            compGuessList.removeIf(n -> (n.charAt(1) != testCode.charAt(1)));
-//        }
-//
-//        if (testCode.charAt(2) == compGuess.charAt(2)){
-//            compGuessList.removeIf(n -> (n.charAt(2) != testCode.charAt(2)));
-//        }
-//
-//        if (testCode.charAt(3) == compGuess.charAt(3)){
-//            compGuessList.removeIf(n -> (n.charAt(3) != testCode.charAt(3)));
-//        }
-
-//        System.out.println(compGuessList.size());
-
-
-        StringBuilder code = new StringBuilder();
-
         //Game set up
         System.out.println("Welcome to Bulls and Cows!");
         int gameOption = gameSetUp();
 
         if (gameOption == 1){
             //Gets the random computer code that is used for the game
-            level = levelSelection();
             String computerCode = comp.getCode("");
             System.out.println("C: " + computerCode);
             //Gets the user's secret four digit code (that the computer will try guess)
-            String playerCode = player.getCode("Please enter a unique four digit code: ");
+            String playerCode = player.getCode("Please enter a unique four digit secret code: ");
             System.out.println("P: " + playerCode);
+            level = levelSelection();
+            turns = getTurns();
             if (level == 1){
-                easy.playGame(computerCode, playerCode);
+                easy.playGame(computerCode, playerCode, turns);
                 replay = replayGame();
                 if (replay == 1){
                     start();
                 }
             } else if (level == 2){
-                medium.playGame(computerCode, playerCode);
+                medium.playGame(computerCode, playerCode, turns);
                 replay = replayGame();
                 if (replay == 1){
                     start();
                 }
             } else if (level == 3){
-                hard.playGame(computerCode, playerCode);
+                hard.playGame(computerCode, playerCode, turns);
                 replay = replayGame();
                 if (replay == 1){
                     start();
+                } else {
+                    System.exit(0);
                 }
             }
         } else if (gameOption == 2){
@@ -104,6 +64,9 @@ public class Application {
             System.exit(0);
         }
     }
+
+    /* gameSetUp() returns an integer, which is used to determine if the game should start, go to the gameInstructions()
+    * method or exits the program*/
 
     private int gameSetUp(){
         System.out.println(" Enter 1 to start game or, \n Enter 2 to get instructions on how to play or, \n Enter 3 to exit the game");
@@ -123,6 +86,8 @@ public class Application {
             return gameSetUp();
         }
     }
+
+    /* levelSelection() returns an integer, which is used to determine which level of game should be played */
 
     private int levelSelection (){
 
@@ -153,6 +118,20 @@ public class Application {
         }
     }
 
+    /* getTurns() returns an integer, which is used to determine how many rounds of the game should be played */
+
+    private int getTurns () {
+        System.out.print("How many rounds would you like to play (choose between 5 and 15): ");
+       turns = Integer.parseInt(Keyboard.readInput());
+        if (turns  < 5 || turns > 15) {
+            System.out.print("You can not choose less than 5 or more than 15 rounds - ");
+            return getTurns();
+        }
+        return turns;
+    }
+
+    /* gameInstructions() prints out a list of instructions if the method is called */
+
     private void gameInstructions (){
         System.out.println("The aim of Bulls and Cows is to get four bulls:");
         System.out.println("\t - Choose which level to play (easy, medium or hard) and how many rounds you want the game to be (from 5 to 15).");
@@ -166,6 +145,9 @@ public class Application {
         Keyboard.readInput();
 
     }
+
+    /* replayGame() returns an integer, which is used to determine if the game should be replayed, or if the program
+     * should exit */
 
     private int replayGame (){
 

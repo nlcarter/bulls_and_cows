@@ -21,7 +21,7 @@ public abstract class Level {
     Code comp = new Computer();
     Code player = new Player();
 
-    public abstract void playGame (String compCode, String playerCode);
+    public abstract void playGame (String compCode, String playerCode, int turns);
 
     int getBulls(String compCode, String playerCode){
         int countBulls = 0;

@@ -1,13 +1,13 @@
 public class Easy extends Level {
 
     @Override
-    public void playGame(String compCode, String playerCode) {
+    public void playGame(String compCode, String playerCode, int userTurns) {
 
         turns = 1;
 
-        while (turns < 8) {
+        while (turns <= userTurns) {
 
-            String userGuess = player.getCode("Round " + turns + " of 7 - Try to guess the computer's four digit code: ");
+            String userGuess = player.getCode("Round " + turns + " of " + userTurns + " - Try to guess the computer's four digit code: ");
             System.out.println("You guessed " + userGuess);
             bullCount = getBulls(compCode, userGuess);
             cowCount = getCowCount(compCode, userGuess);

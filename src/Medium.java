@@ -5,7 +5,7 @@ public class Medium extends Level {
     Set<String> codeSet;
 
     @Override
-    public void playGame(String compCode, String playerCode) {
+    public void playGame(String compCode, String playerCode, int userTurns) {
 
         //Create a set of codes that contain the 5040 unique four-digit codes. The computer will then select a code
         //from this list each time, ensuring it will not pick the same code multiple times
@@ -20,9 +20,9 @@ public class Medium extends Level {
         turns = 1;
         int count = 0;
 
-        while (turns < 8) {
+        while (turns <= userTurns) {
 
-            String userGuess = player.getCode("Round " + turns + " of 7 - Try to guess the computer's four digit code: ");
+            String userGuess = player.getCode("Round " + turns + " of " + userTurns + " - Try to guess the computer's four digit code: ");
             System.out.println("You guessed " + userGuess);
             bullCount = getBulls(compCode, userGuess);
             cowCount = getCowCount(compCode, userGuess);

@@ -5,7 +5,7 @@ public class Hard extends Level {
     Set<String> codeSet;
 
     @Override
-    public void playGame(String compCode, String playerCode) {
+    public void playGame(String compCode, String playerCode, int userTurns) {
 
         codeSet = new HashSet<>();
         while (codeSet.size() < 5040){
@@ -16,9 +16,9 @@ public class Hard extends Level {
 
         turns = 1;
 
-        while (turns < 8) {
+        while (turns <= userTurns) {
 
-            String userGuess = player.getCode("Round " + turns + " of 7 - Try to guess the computer's four digit code: ");
+            String userGuess = player.getCode("Round " + turns + " of " + userTurns + " - Try to guess the computer's four digit code: ");
             System.out.println("You guessed " + userGuess);
             bullCount = getBulls(compCode, userGuess);
             cowCount = getCowCount(compCode, userGuess);
@@ -46,6 +46,10 @@ public class Hard extends Level {
                         }
                     }
                 }
+            }
+
+            if (compGuessList.contains(compGuess)){
+                compGuessList.remove(compGuess);
             }
 
             System.out.println("The computer guessed " + compGuess);
