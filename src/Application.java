@@ -19,6 +19,50 @@ public class Application {
         Player player = new Player();
         Level easy = new Easy();
         Level medium = new Medium();
+        Level hard = new Hard();
+
+
+//        Set<String> codeSet;
+//        codeSet = new HashSet<>();
+//        while (codeSet.size() < 5040){
+//            codeSet.add(comp.getCode(""));
+//        }
+//        List<String> compGuessList = new ArrayList<>(codeSet);
+//        Collections.shuffle(compGuessList);
+//
+//        String compGuess = compGuessList.get(0);
+//        System.out.println(compGuess);
+//
+//        String testCode = player.getCode("Please enter a unique four digit code: ");
+//
+//        System.out.println(compGuess + " / " + testCode);
+//
+//        for (int i = 0; i < compGuess.length(); i++){
+//            if (testCode.charAt(i) == compGuess.charAt(i)){
+//                int finalI = i;
+//                compGuessList.removeIf(n -> (n.charAt(finalI) != testCode.charAt(finalI)));
+//            }
+//        }
+
+
+//        if (testCode.charAt(0) == compGuess.charAt(0)){
+//            compGuessList.removeIf(n -> (n.charAt(0) != testCode.charAt(0)));
+//        }
+//
+//        if (testCode.charAt(1) == compGuess.charAt(1)){
+//            compGuessList.removeIf(n -> (n.charAt(1) != testCode.charAt(1)));
+//        }
+//
+//        if (testCode.charAt(2) == compGuess.charAt(2)){
+//            compGuessList.removeIf(n -> (n.charAt(2) != testCode.charAt(2)));
+//        }
+//
+//        if (testCode.charAt(3) == compGuess.charAt(3)){
+//            compGuessList.removeIf(n -> (n.charAt(3) != testCode.charAt(3)));
+//        }
+
+//        System.out.println(compGuessList.size());
+
 
         StringBuilder code = new StringBuilder();
 
@@ -42,6 +86,12 @@ public class Application {
                 }
             } else if (level == 2){
                 medium.playGame(computerCode, playerCode);
+                replay = replayGame();
+                if (replay == 1){
+                    start();
+                }
+            } else if (level == 3){
+                hard.playGame(computerCode, playerCode);
                 replay = replayGame();
                 if (replay == 1){
                     start();
