@@ -41,6 +41,8 @@ public class Hard extends Level {
                             int finalI = i;
                             int finalJ = j;
                             compGuessList.removeIf(n -> (n.charAt(finalJ) == playerCode.charAt(finalI)));
+                            String testing = Character.toString(playerCode.charAt(i));
+                            compGuessList.removeIf(n -> (!n.contains(testing)));
                         }
                     }
                 }
@@ -50,7 +52,7 @@ public class Hard extends Level {
                 compGuessList.remove(compGuess);
             }
 
-//            System.out.println("List size remaining = " + compGuessList.size());
+            System.out.println("List size remaining = " + compGuessList.size());
             bullCount = getBulls(compGuess, playerCode);
             cowCount = getCows(compGuess, playerCode);
             System.out.println("- The computer guessed " + compGuess + ", which scored " + bullCount + " Bulls and " + cowCount+ " Cows.");
