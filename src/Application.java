@@ -121,7 +121,7 @@ public class Application {
     /* getTurns() returns an integer, which is used to determine how many rounds of the game should be played */
 
     private int getTurns () {
-        System.out.print("How many rounds would you like to play (choose between 5 and 15): \n-------------- ");
+        System.out.print("How many rounds would you like to play (choose between 5 and 15): ");
        turns = Integer.parseInt(Keyboard.readInput());
         if (turns  < 5 || turns > 15) {
             System.out.print("You can not choose less than 5 or more than 15 rounds - ");

@@ -8,6 +8,8 @@ public class Easy extends Level {
     @Override
     public void playGame(String compCode, String playerCode, int userTurns) {
 
+        System.out.println("--------------");
+
         turns = 1;
 
         while (turns <= userTurns) {
