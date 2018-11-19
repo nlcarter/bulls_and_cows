@@ -22,7 +22,7 @@ public class Hard extends Level {
 
             String userGuess = player.getCode("Round " + turns + " of " + userTurns + " - Try to guess the computer's four digit code: ");
             bullCount = getBulls(compCode, userGuess);
-            cowCount = getCowCount(compCode, userGuess);
+            cowCount = getCows(compCode, userGuess);
             System.out.println("- You guessed " + userGuess + ", which scored " + bullCount + " Bulls and " + cowCount+ " Cows.");
             if (bullCount == 4){
                 System.out.println("Four Bulls! You guessed the computer's secret code (" + compCode + ") and win the game.");
@@ -52,7 +52,7 @@ public class Hard extends Level {
 
 //            System.out.println("List size remaining = " + compGuessList.size());
             bullCount = getBulls(compGuess, playerCode);
-            cowCount = getCowCount(compGuess, playerCode);
+            cowCount = getCows(compGuess, playerCode);
             System.out.println("- The computer guessed " + compGuess + ", which scored " + bullCount + " Bulls and " + cowCount+ " Cows.");
             if (bullCount == 4){
                 System.out.println("Four Bulls! The computer guessed your secret code (" + playerCode + ") and win the game.");

@@ -43,7 +43,7 @@ public abstract class Level {
      /* The getCows() method compares the two codes for in-exact matches, and then returns the number of in-exact matches
      to be used as the cows */
 
-    int getCowCount (String compCode, String playerCode){
+    int getCows (String compCode, String playerCode){
         cowCount = 0;
         bullCount = 0;
         for (int i = 0; i < compCode.length(); i++){
